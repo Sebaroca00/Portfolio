@@ -1,0 +1,27 @@
+/* src/routes.css */
+.dark-mode {
+    background-color: #212529;
+    color: #f8f9fa;
+  }
+  
+  .light-mode {
+    background-color: #f8f9fa;
+    color: #212529;
+  }
+  
+  .mode-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .btn-primary {
+    background-color: #398ee9;
+    border-color: #398ee9;
+  }
+  
+  .dark-mode .btn-primary {
+    background-color: #375a7f;
+    border-color: #375a7f;
+  }
+  

@@ -1,11 +1,8 @@
 // src/routes.jsx
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home from "./components/views/Home";
-import About from "./components/views/About";
-import Contact from "./components/views/Contact";
-import Project from "./components/views/Project";
-import "./App.css";
+import Home from "./components/views/Home/Home";
+import "./routes.css"; // Importar estilos de routes.css
 
 function AppRoutes() {
   const [darkMode, setDarkMode] = useState(false);
@@ -13,6 +10,16 @@ function AppRoutes() {
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
   };
+
+  // Optional: Save the mode preference in localStorage
+  useEffect(() => {
+    const savedMode = localStorage.getItem("darkMode") === "true";
+    setDarkMode(savedMode);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("darkMode", darkMode);
+  }, [darkMode]);
 
   return (
     <div className={darkMode ? "dark-mode" : "light-mode"}>
@@ -22,14 +29,9 @@ function AppRoutes() {
             {darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
           </button>
         </div>
-        <div className="d-flex flex-grow-1">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/project" element={<Project />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
       </Router>
     </div>
   );

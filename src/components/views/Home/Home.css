@@ -1,0 +1,33 @@
+/* src/components/views/Home/Home.css */
+.home-container {
+    min-height: 100vh;
+    padding: 0;
+  }
+  
+  .home-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  .home-row {
+    text-align: center;
+    padding: 5rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .home-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .home-lead {
+    font-size: 1.25rem;
+  }
+  
+  .home-description {
+    font-size: 1rem;
+  }
+  
