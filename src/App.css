@@ -1,0 +1,49 @@
+/* src/App.css */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#root {
+  width: 100%;
+  text-align: center;
+}
+
+.light-mode {
+  background-color: #f8f9fa;
+  color: #212529;
+  min-height: 100vh; /* Asegúrate de que cubra toda la altura de la ventana */
+  display: flex;
+  flex-direction: column;
+}
+
+.dark-mode {
+  background-color: #212529;
+  color: #f8f9fa;
+  min-height: 100vh; /* Asegúrate de que cubra toda la altura de la ventana */
+  display: flex;
+  flex-direction: column;
+}
+
+.mode-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.dark-mode .btn-primary {
+  background-color: #375a7f;
+  border-color: #375a7f;
+}
